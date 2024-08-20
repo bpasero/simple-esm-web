@@ -1,0 +1,19 @@
+<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+	<head>
+        <link rel="stylesheet" type="text/css" href="./vscode-web-insiders/out/vs/workbench/workbench.web.main.css">
+    </head>
+    <body>
+        <script>
+            const baseUrl = new URL('http://127.0.0.1:8080', window.location.origin).toString();
+            globalThis._VSCODE_FILE_ROOT = baseUrl + '/vscode-web-insiders/out/';
+        </script>
+        <script src="https://main.vscode-cdn.net/insider/d751e4324d12370e950f8cd031aa8829637ce300/out/vs/loader.js"></script>
+        <script src="./vscode-web-insiders/out/nls.messages.js"></script>
+        <script type="module">
+            const { URI, Event, Emitter, Disposable, GroupOrientation, LogLevel, RemoteAuthorityResolverError, RemoteAuthorityResolverErrorCode, env, window, workspace, commands, logger, Menu, create } = await import('https://main.vscode-cdn.net/insider/72350e2ba9c9d8c17a9c5fa58ed02a4e749e2fa6/out/vs/workbench/workbench.web.main.js');
+            create(document.body);
+        </script>
+    </body>
+</html>
